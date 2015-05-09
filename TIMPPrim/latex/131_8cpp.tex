@@ -1,0 +1,51 @@
+\hypertarget{131_8cpp}{}\section{Файл T\+I\+M\+P\+Prim/131.cpp}
+\label{131_8cpp}\index{T\+I\+M\+P\+Prim/131.\+cpp@{T\+I\+M\+P\+Prim/131.\+cpp}}
+{\ttfamily \#include $<$conio.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{131_8cpp_acdef7a1fd863a6d3770c1268cb06add3}{main} ()
+\begin{DoxyCompactList}\small\item\em Алгоритм Прима — алгоритм построения минимального остовного дерева взвешенного связного неориентированного графа. Алгоритм впервые был открыт в 1930 году чешским математиком Войцехом Ярником, позже переоткрыт Робертом Примом в 1957 году, и, независимо от них, Э. Дейкстрой в 1959 году. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+\begin{DoxyVersion}{Версия}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Дата}
+09.\+0515  Release algoritym Prima 
+\end{DoxyDate}
+
+
+\subsection{Функции}
+\hypertarget{131_8cpp_acdef7a1fd863a6d3770c1268cb06add3}{}\index{131.\+cpp@{131.\+cpp}!main@{main}}
+\index{main@{main}!131.\+cpp@{131.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{131_8cpp_acdef7a1fd863a6d3770c1268cb06add3}
+
+
+Алгоритм Прима — алгоритм построения минимального остовного дерева взвешенного связного неориентированного графа. Алгоритм впервые был открыт в 1930 году чешским математиком Войцехом Ярником, позже переоткрыт Робертом Примом в 1957 году, и, независимо от них, Э. Дейкстрой в 1959 году. 
+
+int $\ast$$\ast$\+A=new int$\ast$ \mbox{[}N\mbox{]} Массив расстояний между вершинами
+
+int $\ast$\+Visit=new int \mbox{[}N\mbox{]} Массив для посещённых рёбер, 1-\/да 0-\/нет
+
+for(int i=0;i$<$N;i++) Цикл ввода расстояний
+
+Делаем так, что все вершины не посещены
+
+Visit\mbox{[}0\mbox{]}=1 Начальное ребро 1 для посещения
+
+while(index2!=N) Цикл поиска минимальных рёбер и подсчёта стоимости получившегося минимального остовного дерева. Цикл работает, пока все вершины не будут посещены
+
+На выходе имеем минимальное ребро
+
+if(Visit\mbox{[}a\mbox{]}==0 $\vert$$\vert$ Visit\mbox{[}b\mbox{]}==0) Выполняем проверку
+
+Visit\mbox{[}b\mbox{]}=1 Отмечаем посещённое ребро
+
+A\mbox{[}a\mbox{]}\mbox{[}b\mbox{]}=A\mbox{[}b\mbox{]}\mbox{[}a\mbox{]}=I\+N\+T\+\_\+\+M\+A\+X Исключаем просмотренный путь, методом присвоения ему I\+N\+T\+\_\+\+M\+A\+X 
